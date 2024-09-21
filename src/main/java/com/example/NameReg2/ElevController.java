@@ -11,6 +11,7 @@ public class ElevController {
     @Autowired
     ElevService elevService ;
 
+    @CrossOrigin
     @PostMapping("/createElev")
     @ResponseBody
     public String createElev(@RequestBody Elev elev) throws Exception{
@@ -21,7 +22,7 @@ public class ElevController {
         }
         return "error" ;
     }
-
+    @CrossOrigin
     @DeleteMapping("/deleteElev/{id}")
     @ResponseBody
     public String deleteElevById(@PathVariable long id) throws Exception{
@@ -38,6 +39,7 @@ public class ElevController {
         return "id ikke gyldig" ;
     }
 
+    @CrossOrigin
     @GetMapping("/findElevById/{id}")
     @ResponseBody
     public Elev findElevById(@PathVariable long id){
@@ -46,6 +48,7 @@ public class ElevController {
         }
         return null ;
     }
+    @CrossOrigin
     @GetMapping("findAllElev")
     @ResponseBody
     public List<Elev> findAllElev(){
