@@ -48,7 +48,7 @@ public class ElevController {
         }
         return null ;
     }
-    @CrossOrigin
+
     @GetMapping("findAllElev")
     @ResponseBody
     public List<Elev> findAllElev(){
